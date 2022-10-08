@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from './style';
 
 interface CardClientStatusElement {
@@ -34,16 +35,26 @@ export const CardClient: React.FC<CardClientProps> = ({ client, age, purchases, 
 
   return (
     <Container>
-      <p className="card-client__name">Nome: {client}</p>
-      <p className="card-client__age">Idade: {age}</p>
-      <p className="card-client__status">
+      <p className="card-client__name" role="client">
+        Nome: {client}
+      </p>
+      <p className="card-client__age" role="age">
+        Idade: {age}
+      </p>
+      <p className="card-client__status" role="status">
         Situação:{' '}
         <span className={`card-client__status-text card-client__status-text--${getStatus().class}`}>
           {getStatus().text}
         </span>
       </p>
-      <p className="card-client__total">Total gasto: R$ {getTotal()}</p>
-      {isExpensive() && <p className="card-client__expensive">Voce está gastando muito.</p>}
+      <p className="card-client__total" role="total">
+        Total gasto: R$ {getTotal()}
+      </p>
+      {isExpensive() && (
+        <p className="card-client__expensive" role="expensive">
+          Voce está gastando muito.
+        </p>
+      )}
     </Container>
   );
 };
