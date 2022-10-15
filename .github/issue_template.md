@@ -1,8 +1,8 @@
-## Descrição
+### Descrição
 
 Descrição do problema/melhoria/sugestão
 
-# Ações
+### Ações
 
 Lista das ações que serão necessárias para resolver o problema/melhoria/sugestão descrito acima.
 
