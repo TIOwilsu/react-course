@@ -19,7 +19,7 @@ Antes de enviar seu PR, por favor, revise a seguinte checklist:
 - [ ] Documentação adicionada ao README (caso necessite)
 - [ ] Quaisquer alterações dependentes foram mescladas (se apropriado)
 
-_Mais sobre:_
+**Mais sobre:**
 
 - Mais algo que devemos saber sobre?
 
