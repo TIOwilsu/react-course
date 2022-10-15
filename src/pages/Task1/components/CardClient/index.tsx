@@ -1,4 +1,6 @@
 import React from 'react';
+import { formatNumber } from 'utils/formatNumber';
+import { Client, ClientPurchase } from 'pages/Task1/interfaces';
 import { Container } from './style';
 
 interface CardClientStatusElement {
@@ -6,22 +8,10 @@ interface CardClientStatusElement {
   class: string;
 }
 
-interface CardClientPurchase {
-  name: string;
-  price: string;
-}
-
-interface CardClientProps {
-  client: string;
-  age: number;
-  purchases: Array<CardClientPurchase>;
-  status: boolean;
-}
-
-export const CardClient: React.FC<CardClientProps> = ({ client, age, purchases, status }) => {
+export const CardClient: React.FC<Client> = ({ client, age, purchases, status }) => {
   const getTotal = (): number => {
-    return purchases.reduce((total, purchase) => {
-      const price = +purchase.price.replace('R$ ', '');
+    return purchases.reduce((total: number, purchase: ClientPurchase) => {
+      const price: number = formatNumber(purchase.price);
       total += price;
       return total;
     }, 0);
