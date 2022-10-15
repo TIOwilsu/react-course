@@ -17,6 +17,9 @@ const Home: React.FC = () => {
         <Link className="app-link" to="/task1">
           Task1
         </Link>
+        <Link className="app-link" to="/task2">
+          Task2
+        </Link>
       </header>
     </Container>
   );
