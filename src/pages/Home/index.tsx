@@ -20,6 +20,9 @@ const Home: React.FC = () => {
         <Link className="app-link" to="/task2">
           Task2
         </Link>
+        <Link className="app-link" to="/task3">
+          Task3
+        </Link>
       </header>
     </Container>
   );
